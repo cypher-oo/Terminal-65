@@ -42,4 +42,18 @@ const firebaseConfig = {
           venue:venue,
       })
   }
+  var userDataRef = firebase.database().ref("vendors").orderByKey();
+  userDataRef.once("value").then(function(snapshot) {
+  snapshot.forEach(function(childSnapshot) {
+    var key = childSnapshot.key;
+    var childData = childSnapshot.val();              
+    var name_val = childSnapshot.val().vendor_name;
+    var price = childSnapshot.val().price;
+    var state = childSnapshot.val().state;
+    var city = childSnapshot.val().city;
+    var image=childSnapshot.val().image;
+    console.log(name_val)
   
+ 
+    });
+  });
