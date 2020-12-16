@@ -52,7 +52,7 @@ const firebaseConfig = {
     var state = childSnapshot.val().state;
     var city = childSnapshot.val().city;
     var image=childSnapshot.val().image;
-    console.log(name_val)
+    console.log(childData)
   
  
     });
