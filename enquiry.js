@@ -30,6 +30,11 @@ const firebaseConfig = {
   
 
   }
+  var preloader = document.getElementById('loading');
+  function myFunction(){
+     preloader.style.display='none'
+  }
+
   
   // save response to firebase 
   function saveResponse(Name, email,number,state,venue){
@@ -52,8 +57,12 @@ const firebaseConfig = {
     var state = childSnapshot.val().state;
     var city = childSnapshot.val().city;
     var image=childSnapshot.val().image;
+    
+    document.getElementById('test').innerHTML=childData['vendor_name']
+    document.getElementById('pic').src=image
+    document.getElementById('description').innerHTML=childData['description']
+    document.getElementById('price').innerHTML="₹ "+childData['price']
+    document.getElementById('city').innerHTML=childData['city']+","+state
     console.log(childData)
-  
- 
     });
   });

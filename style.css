@@ -1,0 +1,16 @@
+.response{
+    text-align: center;
+    padding: 10px;
+    background: #79c879;
+    color: white;
+    margin-bottom: 10px;
+    display: none;
+}
+#loading{
+    width: 100%;
+    position: fixed;
+    height: 100vh;
+    background: #fff url('https://flevix.com/wp-content/uploads/2019/12/Color-Fill-loading-Image-1.gif') no-repeat center;
+    z-index: 9999;
+
+}
