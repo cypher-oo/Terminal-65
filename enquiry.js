@@ -47,22 +47,59 @@ const firebaseConfig = {
           venue:venue,
       })
   }
-  var userDataRef = firebase.database().ref("vendors").orderByKey();
-  userDataRef.once("value").then(function(snapshot) {
-  snapshot.forEach(function(childSnapshot) {
-    var key = childSnapshot.key;
-    var childData = childSnapshot.val();              
-    var name_val = childSnapshot.val().vendor_name;
-    var price = childSnapshot.val().price;
-    var state = childSnapshot.val().state;
-    var city = childSnapshot.val().city;
-    var image=childSnapshot.val().image;
+  // var userDataRef = firebase.database().ref("vendors").orderByKey();
+  // userDataRef.once("value").then(function(snapshot) {
+  // snapshot.forEach(function(childSnapshot) {
+  //   var key = childSnapshot.key;
+  //   var childData = childSnapshot.val();              
+  //   var name_val = childSnapshot.val().vendor_name;
+  //   var price = childSnapshot.val().price;
+  //   var state = childSnapshot.val().state;
+  //   var city = childSnapshot.val().city;
+  //   var image=childSnapshot.val().image;
     
-    document.getElementById('test').innerHTML=childData['vendor_name']
-    document.getElementById('pic').src=image
-    document.getElementById('description').innerHTML=childData['description']
-    document.getElementById('price').innerHTML="₹ "+childData['price']
-    document.getElementById('city').innerHTML=childData['city']+","+state
-    console.log(childData)
-    });
-  });
+    // document.getElementById('test').innerHTML=childData['vendor_name']
+    // document.getElementById('pic').src=childData['picture']
+    // document.getElementById('description').innerHTML=childData['description']
+
+    // document.getElementById('city').innerHTML=childData['city']
+  //   console.log(childData)
+  
+ 
+  //   });
+  // });
+     const dr =firebase.database().ref("/vendors");
+     dr.on('value',(snapshot)=>{
+       var drs =snapshot.val()
+       if(drs!=null)
+       {
+       var keys =Object.keys(drs);
+       let newService =[];
+       for(var dr = 0 ;dr<keys.length;dr++){
+         var k=keys[dr];
+         newService.push({
+           description:drs[k].description,
+           ideal:drs[k].ideal,
+           price:drs[k].price,
+           image_url:drs[k].image,
+           vendor_name:drs[k].vendor_name,
+           tnc:drs[k].terms_and_conditions,
+           city:drs[k].city,
+           state:drs[k].state,
+           
+           id:k,
+         });
+         document.getElementById('test').innerHTML=drs[k].vendor_name
+         document.getElementById('price').innerHTML='Rs '+ drs[k].price,
+         document.getElementById('description').innerHTML=drs[k].description,
+         document.getElementById('address').innerHTML=drs[k].city+","+drs[k].state,
+         document.getElementById('pic').src=drs[k].image
+         console.log(newService)
+       }
+
+
+         
+     } 
+     })
+     
+  
