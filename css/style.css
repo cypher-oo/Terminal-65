@@ -114,7 +114,7 @@ Author:             Jitu Chauhan
 
 
 body { font-family: 'Rubik', sans-serif; font-size: 16px; line-height: 28px; color: #6f6d72; background-color: #f6f6f6;    /*-webkit-font-smoothing: antialiased; */ text-rendering: optimizeLegibility; font-weight: 400; }
-h1, h2, h3, h4, h5, h6 { color: #252328; margin: 0px 0px 15px 0px; font-weight: 300; font-family: 'Rubik', sans-serif; }
+h1, h2, h3, h4, h5, h6 { color: #fff; margin: 0px 0px 15px 0px; font-weight: 300; font-family: 'Rubik', sans-serif; font-size: 2px; }
 h1 { font-size: 42px; }
 h2 { font-size: 32px; line-height: 42px; }
 h3 { font-size: 20px; line-height: 28px; }
@@ -419,9 +419,10 @@ a img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
 /*----------------------
   4.2 Margin Space
 -----------------------*/
+
 .mb0 { margin-bottom: 0px; }
 .ml30 { margin-left: 30px; }
-.mb10 { margin-bottom: 10px; }
+.mb10 { margin-bottom: 16px; color: #000; }
 .mb20 { margin-bottom: 20px; }
 .mb30 { margin-bottom: 30px; }
 .mb35 { margin-bottom: 35px; }
@@ -534,7 +535,7 @@ Background Color / Color
 .text-light { color: #f0f0f8 !important; }
 .text-dark { color: #343a40 !important; }
 .text-gray { color: #868aa5 !important; }
-.text-white { color: #fff; }
+.text-white { color: #fff; font-size: 16px;}
 .text-light { color: #f8f9fa !important; }
 .title { color: #252328; }
 .well-box { background-color: #fff; border: 1px solid #e6e5e7; padding: 26px; margin-bottom: 20px; }
@@ -757,11 +758,11 @@ img.grayscale:hover { filter: grayscale(0); opacity: 1; transition-property: fil
 .testimonial-second.testimonial-block { background-color: #fffbf3; border: 1px solid #faeed5; padding: 0px; }
 .testimonial-second .testimonial-content { padding: 40px; border-bottom: 1px solid #faeed5; }
 .testimonial-second .testimonial-icon { text-align: left; margin: 0; float: left; }
-.testimonial-second .testimonial-name { text-align: left; }
+.testimonial-second .testimonial-name { text-align: left; color: #000; }
 .testimonial-second .testimonial-text { text-align: left; color: #6f6d72; font-size: 16px; line-height: 30px; }
 .testimonial-second .testimonial-meta { text-align: left; padding: 36px; position: relative; }
 .testimonial-second .testimonial-pic { text-align: left; float: left; margin-bottom: 0px; }
-.testimonial-second .testimonial-meta-text { padding-left: 67px; }
+.testimonial-second .testimonial-meta-text { padding-left: 67px; color: #000;}
 .testimonial-second .rating-star { position: absolute; right: 36px; bottom: 42px; }
 .footer-widget.newsletter-block { }
 .footer-widget.newsletter-block .form-control { background-color: #454249; border: transparent; color: #817f85; }
