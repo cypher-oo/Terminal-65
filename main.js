@@ -30,12 +30,12 @@ function submitForm(e){
       //save response to db
     saveResponse(firstname, lastname, email,number,address,address1,city,state,pin,venue)
     
-     // Show alert
-  document.querySelector('.response').style.display = 'block';
-  // Hide alert after 3 seconds
-  setTimeout(function(){
-    document.querySelector('.response').style.display = 'none';
-  },3000); 
+  //    // Show alert
+  // document.querySelector('.response').style.display = 'block';
+  // // Hide alert after 3 seconds
+  // setTimeout(function(){
+  //   document.querySelector('.response').style.display = 'none';
+  // },3000); 
 
   // Clear form
   document.getElementById('contact').reset();

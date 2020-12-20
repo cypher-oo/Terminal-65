@@ -409,7 +409,7 @@
     <h2 class="mb10"> Register your company here</h2>
     <h3 class="mb10"> Our business development officer will be in touch with you shortly.</h3>
     <br><br>
-	<form action="https://script.google.com/macros/s/AKfycbzlp7c2Bm-5R82XSK7fCEapJuchFt23w0fP0kA4/exec" method="POST" class="gform">
+	<form action="https://script.google.com/macros/s/AKfycbzlp7c2Bm-5R82XSK7fCEapJuchFt23w0fP0kA4/exec" id='contact' class="gform">
         <div class="form-row">
             <div class="form-group col-md-6">
             <input type="text" class="form-control" name="firstName" id="firstName" placeholder="First Name" required>
@@ -437,7 +437,7 @@
             <input type="text" class="form-control" name="city" id="city"  placeholder="City" required>
             </div>
             <div class="form-group col-md-6">
-            <input type="text" class="form-control" name="state" placeholder="State" required>
+            <input type="text" class="form-control" id='state' name="state" placeholder="State" required>
             </div>
         </div>
         <!-- <div class="form-row">
@@ -615,6 +615,9 @@
     </div> 
 	<a href="javascript:" id="return-to-top"><i class="fa fa-angle-up"></i></a>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+    <script src="main.js"></script>
+     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="js/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
