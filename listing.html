@@ -307,16 +307,16 @@
                 <div class="col-xl-7 col-lg-7 col-md-12 col-sm-12 col-12">
                     <div class="">
                         <h1 class="vendor-heading" id="test"></h1>
-                        <p class="text-white"><span class="mr-2"><i class="fa fa-map-marker" aria-hidden="true"></i></span>Plot no-4342,Sector-23 OPP.
-                            <br> HP petrol Pump,Near entry gate no-1
-                            <br> Gurgaon, Haryana <a href="#view-map" class="btn-default-link">view map</a></p>
+                        <p class="text-white" ><span class="mr-2"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                            <br> <span id="address"></span>
+                            <br><span id="city"></span> <a href="#view-map" class="btn-default-link">view map</a></p>
                     </div>
                 </div>
                 <div class="col-xl-5 text-lg-right">
-                     <div class="mt-xl-4">
+                     <!-- <div class="mt-xl-4">
                         <a href="#" class="btn btn-primary" id="open-popup">View Gallery</a>
                         <a href="#" class="btn-default-wishlist"><i class="fa fa-heart"></i><span class="pl-1">Add To Wishlist</span></a>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -331,13 +331,13 @@
                     <!--vendor-details -->
                     <div class="vendor-meta bg-white border m-0">
                         <div class="vendor-meta-item vendor-meta-item-bordered">
-                            <span class="vendor-price">
-                                    $150
+                            <span class="vendor-price" id="price">
+                                    
                                 </span>
                             <span class="vendor-text">Start From</span></div>
                         <div class="vendor-meta-item vendor-meta-item-bordered">
-                            <span class="vendor-guest">
-                                    120+
+                            <span class="vendor-guest" id='capacity'>
+                                  
                                 </span>
                             <span class="vendor-text">Guest</span>
                         </div>
@@ -358,12 +358,7 @@
                             <div class="card-body">
                                 <!--/.vendor-details -->
                                 <!--vendor-description -->
-                                <p class="lead">Duis vulputate ultrices odio, vitae tristique lectus dapibus sit amet. Vivamus iaculis sagittis libero, at mollis ante semper eu. </p>
-                                <p>Duis vulputate ultrices odio, vitae tristique lectus dapibus sit amet. Vivamus iaculis sagittis lisus libero, a aliquet odio pretium non. Curabitur at porta ex, eu pretium felis. Fusce mattis efficitur nisi, non pretium nulla luctus sit amet. </p>
-                                <p>Etiam varius ultricies augue, in ornare lorem congue eu. Aliquam magna metus, rhoncus a pellentesque tincidunt, accumsan ut urna. Sed congue turpis sit amet urna interdum, ut consequat dolor rhoncus</p>
-                                <h4>Sub heading </h4>
-                                <p>Etiam placerat dictum dolor ac volutpat. Cras egestas laoreet risus id elementum. Etiam ultrices vitae dui ut finibus. In ac rhoncus mauris, aliquet efficitur erat. Sed laoreet luctus tellus vel porttitor. Aliquam non tellus in eros congue fermentum. Nulla tincidunt volutpat ligula, non rutrum lectus luctus quis.</p>
-                                <p>Donec accumsan consequat massa non gravida.<span class="text-default">Morbi pharetra mollis tortor ac maximus.</span> Nunc dapibus bibendum urna, in egestas dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+<p id="description"></p>
                                 <!--venue-highlights -->
                                 <div class="venue-highlights">
                                     <div class=" table-responsive">
@@ -377,15 +372,12 @@
                                             <tbody>
                                                 <tr>
                                                     <td>Maximum Capacity</td>
-                                                    <td class="venue-highlight-meta">350</td>
+                                                    <td class="venue-highlight-meta" id='capacitys'></td>
                                                 </tr>
+                                          
                                                 <tr>
-                                                    <td>Guest Minimum</td>
-                                                    <td class="venue-highlight-meta">40</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Style</td>
-                                                    <td class="venue-highlight-meta">Barn, Mansion, Winery</td>
+                                                    <td>Ideal for</td>
+                                                    <td class="venue-highlight-meta" id="ideal"></td>
                                                 </tr>
                                                 <tr>
                                                     <td>Event Spaces</td>
@@ -407,17 +399,17 @@
                                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
                                         <div class="animities-list">
                                             <ul class="list-unstyled arrow">
-                                                <li>Air conditioning</li>
-                                                <li>Bathroom</li>
-                                                <li>Hair Dryer</li>
-                                                <li>Kitchen</li>
-                                                <li>Linen supplied</li>
-                                                <li>Non-smoking</li>
-                                                <li>Open fireplace </li>
+                                                <li>Air conditioning: <span id='ac'></span></li>
+                                                <li>Backup: <span id="backup"></span></li>
+                                                <li>Alcohol: <span id="drinking"></span></li>
+                                                <li>Music: <span id='music'></span></li>
+                                                <li>OutSide Food: <span id="outside"></span></li>
+                                                <li>Pool: <span id='pool'></span></li>
+                                                <li>Wifi:<span id='wifi'></span></li>
                                             </ul>
                                         </div>
                                     </div>
-                                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+                                    <!-- <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
                                         <div class="animities-list">
                                             <ul class="list-unstyled arrow">
                                                 <li>Parking</li>
@@ -429,7 +421,7 @@
                                                 <li>Access Wifi</li>
                                             </ul>
                                         </div>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
@@ -741,7 +733,7 @@
         </div>
     </div>
     <!-- vendor-thumbnail section -->
-    <div class="space-small">
+    <!-- <div class="space-small">
         <div class="container">
             <div class="row">
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
@@ -749,18 +741,18 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
+                <!-- <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
                     <div class="vendor-thumbnail">
                         <!-- Vendor thumbnail -->
-                        <div class="vendor-img zoomimg">
+                        <!-- <div class="vendor-img zoomimg"> -->
                             <!-- Vendor img -->
-                            <a href="#"><img src="images/vendor-img-1.jpg" alt="" class="img-fluid"></a>
+                            <!-- <a href="#"><img src="images/vendor-img-1.jpg" alt="" class="img-fluid"></a>
                             <div class="wishlist-sign"><a href="#" class="btn-wishlist"><i class="fa fa-heart"></i></a></div>
-                        </div>
+                        </div> -->
                         <!-- /.Vendor img -->
-                        <div class="vendor-content">
+                        <!-- <div class="vendor-content"> -->
                             <!-- Vendor Content -->
-                            <h2 class="vendor-title"><a href="#" class="title">Wedding Venue Title Name</a></h2>
+                            <!-- <h2 class="vendor-title"><a href="#" class="title">Wedding Venue Title Name</a></h2>
                             <p class="vendor-address">Ahmedabad, Gujarat.</p>
                         </div>
                         <div class="vendor-meta">
@@ -784,27 +776,27 @@
                                     <i class="fa fa-star rate-mute"></i> 
                                     </span>
                                 <span class="rating-count vendor-text">(20)</span></div>
-                        </div>
+                        </div> -->
                         <!-- /.Vendor Content -->
                     </div>
                     <!-- /.Vendor thumbnail -->
                 </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
-                    <div class="vendor-thumbnail">
+                <!-- <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
+                    <div class="vendor-thumbnail"> -->
                         <!-- Vendor thumbnail -->
-                        <div class="vendor-img zoomimg">
+                        <!-- <div class="vendor-img zoomimg"> -->
                             <!-- Vendor img -->
-                            <a href="#"><img src="images/vendor-img-2.jpg" alt=""  class="img-fluid"></a>
+                            <!-- <a href="#"><img src="images/vendor-img-2.jpg" alt=""  class="img-fluid"></a>
                             <div class="wishlist-sign"><a href="#" class="btn-wishlist"><i class="fa fa-heart"></i></a></div>
-                        </div>
+                        </div> -->
                         <!-- /.Vendor img -->
-                        <div class="vendor-content">
+                        <!-- <div class="vendor-content"> -->
                             <!-- Vendor Content -->
-                            <h2 class="vendor-title"><a href="#" class="title">Wedding Venue Title Name</a></h2>
+                            <!-- <h2 class="vendor-title"><a href="#" class="title">Wedding Venue Title Name</a></h2>
                             <p class="vendor-address">Surat, Gujarat</p>
-                        </div>
+                        </div> -->
                         <!-- /.Vendor Content -->
-                        <div class="vendor-meta">
+                        <!-- <div class="vendor-meta">
                             <div class="vendor-meta-item vendor-meta-item-bordered">
                                 <span class="vendor-price">
                                     $150
@@ -826,52 +818,15 @@
                                     </span>
                                 <span class="rating-count vendor-text">(20)</span></div>
                         </div>
-                    </div>
+                    </div> -->
                     <!-- /.Vendor thumbnail -->
                 </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
-                    <div class="vendor-thumbnail">
-                        <!-- Vendor thumbnail -->
-                        <div class="vendor-img zoomimg">
-                            <!-- Vendor img -->
-                            <a href="#"><img src="images/vendor-img-3.jpg" alt=""  class="img-fluid"></a>
-                            <div class="wishlist-sign"><a href="#" class="btn-wishlist"><i class="fa fa-heart"></i></a></div>
-                        </div>
-                        <!-- /.Vendor img -->
-                        <div class="vendor-content">
-                            <!-- Vendor Content -->
-                            <h2 class="vendor-title"><a href="#" class="title">Wedding Venue Title Name</a></h2>
-                            <p class="vendor-address">Rajkot, Gujarat</p>
-                        </div>
-                        <!-- /.Vendor Content -->
-                        <div class="vendor-meta">
-                            <div class="vendor-meta-item vendor-meta-item-bordered">
-                                <span class="vendor-price">
-                                    $150
-                                </span>
-                                <span class="vendor-text">Start From</span></div>
-                            <div class="vendor-meta-item vendor-meta-item-bordered">
-                                <span class="vendor-guest">
-                                    120+
-                                </span>
-                                <span class="vendor-text">Guest</span>
-                            </div>
-                            <div class="vendor-meta-item vendor-meta-item-bordered">
-                                <span class="rating-star">
-                                    <i class="fa fa-star rated"></i>
-                                    <i class="fa fa-star rated"></i>
-                                    <i class="fa fa-star rated"></i>
-                                    <i class="fa fa-star rated"></i>
-                                    <i class="fa fa-star rate-mute"></i> 
-                                    </span>
-                                <span class="rating-count vendor-text">(20)</span></div>
-                        </div>
-                    </div>
+               
                     <!-- /.Vendor thumbnail -->
-                </div>
-            </div>
-        </div>
-    </div>
+                <!-- </div>
+            </div> -->
+        <!-- </div> -->
+    <!-- </div> -->
     <!-- /.vendor-thumbnail section -->
     <!-- social-media-section -->
    <!-- <div class="social-media-block">
