@@ -105,9 +105,9 @@ vendors.forEach(elem => {
   <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
                     <div class="vendor-thumbnail">
                         <!-- Vendor thumbnail -->
-                        <div class="vendor-img zoomimg">
+                        <div class="vendor-img zoomimg" >
                             <!-- Vendor img -->
-                            <a href="#"><img src="${elem.image_url}" alt="" class="img-fluid"></a>
+                            <a href="#"><img src="${elem.image_url}" alt="" class="img-fluid" style="border-radius: 10%"></a>
                             <div class="wishlist-sign"><a href="#" class="btn-wishlist"><i class="fa fa-heart"></i></a></div>
                         </div>
                         <!-- /.Vendor img -->
