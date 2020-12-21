@@ -223,7 +223,7 @@ vendors.forEach(elem => {
                                     </span>
                                 <span class="rating-count vendor-text">(20)</span></div>
                         </div>
-												<p><a href="/Users/yasirahmad/Downloads/Terminal-65-main/listing.html?name=${elem.vendor_name}">View Details</p>
+												<p><a href="/listing.html?name=${elem.vendor_name}">View Details</p>
                         <!-- /.Vendor Content -->
                     </div>
                     <!-- /.Vendor thumbnail -->
