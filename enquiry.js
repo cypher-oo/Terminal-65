@@ -74,13 +74,15 @@ const firebaseConfig = {
        if(drs!=null)
        {
        var keys =Object.keys(drs);
-       let newService =[];
+       console.log(drs)
+       let vendors =[];
        for(var dr = 0 ;dr<keys.length;dr++){
          var k=keys[dr];
-         newService.push({
+         vendors.push({
            description:drs[k].description,
            ideal:drs[k].ideal,
            price:drs[k].price,
+           capacity:drs[k].capacity,
            image_url:drs[k].image,
            vendor_name:drs[k].vendor_name,
            tnc:drs[k].terms_and_conditions,
@@ -89,12 +91,62 @@ const firebaseConfig = {
            
            id:k,
          });
-         document.getElementById('test').innerHTML=drs[k].vendor_name
-         document.getElementById('price').innerHTML='Rs '+ drs[k].price,
-         document.getElementById('description').innerHTML=drs[k].description,
-         document.getElementById('address').innerHTML=drs[k].city+","+drs[k].state,
-         document.getElementById('pic').src=drs[k].image
-         console.log(newService)
+        //  document.getElementById('test').innerHTML=drs[k].vendor_name
+        //  document.getElementById('price').innerHTML='Rs '+ drs[k].price,
+        //  document.getElementById('description').innerHTML=drs[k].description,
+        //  document.getElementById('address').innerHTML=drs[k].city+","+drs[k].state,
+        //  document.getElementById('pic').src=drs[k].image
+         console.log(vendors)
+         var htmlDiv = "";
+
+vendors.forEach(elem => {
+  console.log(elem.vendor_name)
+  htmlDiv = htmlDiv+ `
+  <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
+                    <div class="vendor-thumbnail">
+                        <!-- Vendor thumbnail -->
+                        <div class="vendor-img zoomimg">
+                            <!-- Vendor img -->
+                            <a href="#"><img src="${elem.image_url}" alt="" class="img-fluid"></a>
+                            <div class="wishlist-sign"><a href="#" class="btn-wishlist"><i class="fa fa-heart"></i></a></div>
+                        </div>
+                        <!-- /.Vendor img -->
+                        <div class="vendor-content">
+                            <!-- Vendor Content -->
+                            <h2 class="vendor-title"><a href="#" class="title">${elem.vendor_name}</a></h2>
+                            <p class="vendor-address">${elem.city},${elem.state}</p>
+                        </div>
+                        <div class="vendor-meta">
+                            <div class="vendor-meta-item vendor-meta-item-bordered">
+                                <span class="vendor-price">
+                                  Rs ${elem.price}
+                                </span>
+                                <span class="vendor-text">Start From</span></div>
+                            <div class="vendor-meta-item vendor-meta-item-bordered">
+                                <span class="vendor-guest">
+                                   ${elem.capacity}+
+                                </span>
+                                <span class="vendor-text">Guest</span>
+                            </div>
+                            <div class="vendor-meta-item vendor-meta-item-bordered">
+                                <span class="rating-star">
+                                    <i class="fa fa-star rated"></i>
+                                    <i class="fa fa-star rated"></i>
+                                    <i class="fa fa-star rated"></i>
+                                    <i class="fa fa-star rated"></i>
+                                    <i class="fa fa-star rate-mute"></i> 
+                                    </span>
+                                <span class="rating-count vendor-text">(20)</span></div>
+                        </div>
+                        <!-- /.Vendor Content -->
+                    </div>
+                    <!-- /.Vendor thumbnail -->
+                </div>
+`;
+console.log(document.getElementById('xx'))
+document.getElementById('xx').innerHTML=htmlDiv
+});
+
        }
 
 
