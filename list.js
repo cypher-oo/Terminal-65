@@ -71,7 +71,6 @@ const firebaseConfig = {
   
   userDataRef.once("value").then(function(snapshot) {
   snapshot.forEach(function(childSnapshot) {
-    console.log(snapshot.val().price)
     var key = childSnapshot.key;
     var childData = snapshot.val();              
     var name_val = childSnapshot.val().vendor_name;
@@ -81,7 +80,7 @@ const firebaseConfig = {
     var image=childSnapshot.val().image;
     document.getElementById('test').innerHTML=childData['vendor_name']
     // document.getElementById('pic').src=childData['picture']
-    document.getElementById('description').innerHTML=
+    document.getElementById('description').innerHTML=childData['description']
     document.getElementById('price').innerHTML='Rs '+ childData['price']
     document.getElementById('city').innerHTML=childData['city']+','+childData['state']
     document.getElementById('capacity').innerHTML=childData['capacity']+"+"
@@ -95,7 +94,6 @@ const firebaseConfig = {
     document.getElementById('outside').innerHTML=childData['outside_food']
     document.getElementById('music').innerHTML=childData['music']
     document.getElementById('backup').innerHTML=childData['backup']
-   
  
     });
   });
