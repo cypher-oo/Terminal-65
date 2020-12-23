@@ -8,10 +8,10 @@
     <link rel="apple-touch-icon" href="https://cdn.sloshout.com/images/favicon.ico">
       <link rel="icon" href="https://cdn.sloshout.com/images/favicon.ico">
     
-      <link href="https://www.sloshout.com/assets/public/css/bootstrap.min.css" rel="stylesheet" type="text/css"  rel="preload" as="style" />
-      <link href="https://www.sloshout.com/assets/public/css/jquery-ui.css?v=4" rel="stylesheet" type="text/css"  rel="preload" as="style" />
-      <link href="./assets/public/css/custom.css?v=1" rel="stylesheet" type="text/css" rel="preload" as="style"/>
-    <link rel="manifest" href="https://www.sloshout.com/manifest.json">  
+      <link href="./assets/public/css/bootstrap.min.css" rel="stylesheet" type="text/css"  rel="preload" as="style" />
+      <link href="./assets/public/css/jquery-ui.css" rel="stylesheet" type="text/css"  rel="preload" as="style" />
+      <link href="./assets/public/css/custom.css" rel="stylesheet" type="text/css" rel="preload" as="style"/>
+     
     
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -394,38 +394,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                     <div class="col-md-12 col-sm-12">
                             <div class="donate">
                                 <p class="title">Select City</p>
-                                <select class="input w-50" name="location" id="location4" onchange="change_venue_type('location4','location423','res_block4','venuetype2','package4')">
-                                    <option value="" disabled="" selected=""> -- Select City --</option>
-                                    <option value="Delhi"> Delhi</option>
-                                    <option value="Gurgaon"> Gurgaon</option>
-                                    <option value="Noida"> Noida</option>
-                                    <option value="Faridabad"> Faridabad</option>
-                                    <option value="Ghaziabad"> Ghaziabad</option>
-                                    <option value="Mumbai"> Mumbai</option>
-                                    <option value="Bangalore"> Bangalore</option>
-                                    <option value="Chandigarh"> Chandigarh</option>
-                                    <option value="Pune"> Pune</option>
-                                    <option value="Kolkata"> Kolkata</option>
-                                    <option value="Jaipur"> Jaipur</option>
-                                    <option value="Lucknow"> Lucknow</option>
-                                    <option value="Chennai"> Chennai</option>
-                                    <option value="Hyderabad"> Hyderabad</option>
-                                </select>
+                                <input type="text" class="input w-50" value="" placeholder="Enter City" name="location" id="location4" onchange="change_venue_type('location4','location423','res_block4','venuetype2','package4')" >
+                                
                             </div>
                     </div>
                 </div>
                 <div id="res_block4" class="dp-hide-title" style="display: none;width:100%;margin:0px auto">
                     <div id="res_block41" style="display: none;">
                         <p class="title">Preferred Location</p>
-                        <select style="width:49% !important;display:inline-block" class="input" name="location2" id="location423">
-                        </select>
+                        <input type="text" class="input w-50" value="" placeholder="Enter City" name="location2" id="location423" > 
+                      
+                        
                     </div>
                     <p class="title">Choose Package</p>
-                    <select class="input" style="width:49% !important;display:inline-block" name="package" id="package4">
-                        <option value="" selected disabled>-- Select Package --</option>
-                        <option value="Alcoholic"> Alcoholic</option>
-                        <option value="Non-Alcoholic"> Non-Alcoholic</option>
-                    </select>
+                    <input type="text" class="input w-50" placeholder="Alcoholic/Non-Alcoholic" value="Alcoholic/Non-Alcoholic" name="package" id="package4">
+                      
+                    
+                    
                 </div>
                 
                 <div class="row custom-feilds">
@@ -536,36 +521,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                             <div class="row">
                                 <div class="col-md-12 col-sm-12">
                                         <div class="donate custom-feilds">
-                                            <p class="title">Select City</p>
-                                            <select class="input w-50" style="display:block;margin:0 auto 10px" name="location" id="location3" onchange="change_venue_type('location3','location23','res_block3','venuetype3','package2')">
-                                                <option value="" disabled="" selected=""> -- Select City --</option>
-                                                <option value="Delhi"> Delhi</option>
-                                                <option value="Gurgaon"> Gurgaon</option>
-                                                <option value="Noida"> Noida</option>
-                                                <option value="Faridabad"> Faridabad</option>
-                                                <option value="Ghaziabad"> Ghaziabad</option>
-                                                <option value="Mumbai"> Mumbai</option>
-                                                <option value="Bangalore"> Bangalore</option>
-                                                <option value="Chandigarh"> Chandigarh</option>
-                                                <option value="Pune"> Pune</option>
-                                                <option value="Kolkata"> Kolkata</option>
-                                                <option value="Jaipur"> Jaipur</option>
-                                                <option value="Lucknow"> Lucknow</option>
-                                                <option value="Chennai"> Chennai</option>
-                                                <option value="Hyderabad"> Hyderabad</option>
-                                            </select>
+                                            <p class="title">Enter City</p>
+                                             <input type="text" class="input w-50" value="" placeholder="Enter City" name="location" id="location3" onchange="change_venue_type('location3','location23','res_block3','venuetype3','package2')" >
+                                         
+
+                                           
                                             <div class="dp-hide-title" id="res_block3" style="display: none;">
                                                 <div id="res_block31" style="display: none;">
                                                     <p class="title" >Preferred Location</p>
-                                                    <select style="width:49% !important" class="input" name="location2" id="location23">
-                                                    </select>
+
+                                                     
+                                   
+                                    <input type="text" class="input w-50" value="" name="location2" id="location23" > 
+                                    
+                              
                                                 </div>
-                                                <p class="title" >Choose Package</p>
-                                                    <select style="width:49% !important" class="input" name="package" id="package2">
-                                                        <option value="" selected disabled>-- Select Package --</option>
-                                                        <option value="Alcoholic"> Alcoholic</option>
-                                                        <option value="Non-Alcoholic"> Non-Alcoholic</option>
-                                                    </select>
+                                                <p class="title"  >Choose Package</p>
+                                                 <input type="text" class="input w-50" placeholder="Alcoholic/Non-Alcoholic" value="Alcoholic/Non-Alcoholic" name="package" id="package2">
+                                                  
+                                                
+                                                  
                                             </div>
     
     
@@ -624,7 +599,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <!-- Modal content-->
           <div class="modal-content">
             <div class="modal-header">
-                <h2>Send enquiry</h2>
+                <h2>Send Enquiry</h2>
               <button type="button" class="close" data-dismiss="modal">&times;</button>
             
             </div>
@@ -642,7 +617,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <input type="email" class="form-control" name="email" id="inputEmail4" placeholder="Email" required>
                 </div>
                 <div class="form-group col-md-6">
-                <input type="number" class="form-control" name="contactNumber" id="contactNumber" placeholder="Contact Number" required>
+                <input type="telephone" pattern="[0-9]{10}" class="form-control" name="contactNumber" id="contactNumber" placeholder="Contact Number" required>
                 </div>
             </div>
             
@@ -675,7 +650,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             </div>
             
             
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary" onclick="alertit()">Submit</button>
         
             </form>
             </div>
@@ -1260,10 +1235,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             }
         });
         </script>
-      <script src="https://www.sloshout.com/assets/public/js/jquery.min.js" ></script>
-      <script defer src="https://www.sloshout.com/assets/public/js/bootstrap.min.js" ></script>
-      <script src="https://www.sloshout.com/assets/public/js/jquery-ui.js?v=1" ></script>
-      <script src="https://www.sloshout.com/assets/public/js/custom.js?v=5" ></script>
+      <script src="./assets/public/js/jquery.min.js" ></script>
+      <script defer src="./assets/public/js/bootstrap.min.js" ></script>
+      <script src="./assets/public/js/jquery-ui.js" ></script>
+      <script src="./assets/public/js/custom.js" ></script>
       <script type="text/javascript">
         function change_venue_type(city,location,block,venuetype,package){
           var val = $('#'+venuetype).val();
@@ -1369,7 +1344,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         if(dp!='' && vt!='' && l!='' && p!=''){
           $('.fieldset-22').hide();$('.fieldset-24').css('display', 'block');
         }else {
-          alert('All fields mandatory.');
+           $('.fieldset-22').hide();$('.fieldset-24').css('display', 'block');
         }
       }
       function validate_step_form_23() {
@@ -1380,7 +1355,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         if(dp!='' && vt!='' && l!='' && p!=''){
           $('.fieldset-2').hide();$('.fieldset-4').css('display', 'block');
         }else {
-          alert('All fields mandatory.');
+          $('.fieldset-2').hide();$('.fieldset-4').css('display', 'block');
         }
       }
       function validate_step_form_24i() {
@@ -1391,7 +1366,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         if(dp!='' && vt!='' && l!='' && p!=''){
           $('.fieldset-2').hide();$('.fieldset-4').css('display', 'block');
         }else {
-          alert('All fields mandatory.');
+                    $('.fieldset-2').hide();$('.fieldset-4').css('display', 'block');
+
         }
       }
       function validate_step_form_24() {
@@ -1402,7 +1378,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         if(dp!='' && vt!='' && l!='' && p!=''){
           $('.fieldset-2').hide();$('.fieldset-4').css('display', 'block');
         }else {
-          alert('All fields mandatory.');
+          $('.fieldset-2').hide();$('.fieldset-4').css('display', 'block');
         }
       }
     $(document).ready(function() {
@@ -1636,5 +1612,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           height: 0px !important;
         }
       </style>
+      <script type="text/javascript">
+          function alertit(){
+
+            alert("Thank You for approaching Terminal65! Someone from the team will contact you within 24 hours! Press Ok to confirm your enquiry. Note: You will be redirected to terminal65.com");
+          }
+      </script>
     </body>
     </html>

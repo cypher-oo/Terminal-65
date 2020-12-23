@@ -224,7 +224,7 @@ vendors.forEach(elem => {
                                 <span class="rating-count vendor-text">(20)</span></div>
                         </div>
 												<h3 class="vendor-meta-item vendor-meta-item-bordered btn-primary"><a href="/listing.html?name=${elem.vendor_name}" class="vendor-text" style="color: #fff">View Details</h3>
-                        <h3 class="vendor-meta-item vendor-meta-item-bordered btn-default" data-toggle="modal" data-target="#myModal"><a class="vendor-text">Send Enquiry</h3>
+                        <h3 class="vendor-meta-item vendor-meta-item-bordered btn-default" data-toggle="modal" data-target="#myModal"><a class="vendor-text" style="cursor: pointer;">Send Enquiry</h3>
                         <!-- /.Vendor Content -->
                     </div>
                     <!-- /.Vendor thumbnail -->

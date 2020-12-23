@@ -214,33 +214,7 @@ jQuery(document).ready(function($) {
     /* POP UP Gallery jQuery **/
 
 
-    if ($('#open-popup').length) {
-
-
-        $('#open-popup').magnificPopup({
-            items: [{
-                    src: 'images/wedding-gallery-img-1.jpg',
-                    title: 'Venue locations #1'
-                },
-                {
-                    src: 'images/wedding-gallery-img-2.jpg',
-                    title: 'Venue locations #2'
-                },
-
-                {
-                    src: 'images/wedding-gallery-img-3.jpg',
-                    title: 'Venue locations #3'
-                },
-
-
-            ],
-            gallery: {
-                enabled: true
-            },
-            type: 'image' // this is a default type
-        });
-
-    }
+  
     /* accordions jQuery **/
 
     if ($('.collapse').length) {
