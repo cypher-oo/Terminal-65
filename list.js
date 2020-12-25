@@ -71,15 +71,8 @@ const firebaseConfig = {
   
   userDataRef.once("value").then(function(snapshot) {
   snapshot.forEach(function(childSnapshot) {
-    var key = childSnapshot.key;
     var childData = snapshot.val();              
-    var name_val = childSnapshot.val().vendor_name;
-    var price = childSnapshot.val().price;
-    var state = childSnapshot.val().state;
-    var city = childSnapshot.val().city;
-    var image=childSnapshot.val().image;
     document.getElementById('test').innerHTML=childData['vendor_name']
-    document.getElementById('open-popup').src=childData['picture']
     document.getElementById('description').innerHTML=childData['description']
     document.getElementById('price').innerHTML='Rs '+ childData['price']
     document.getElementById('city').innerHTML=childData['city']+','+childData['state']
@@ -94,18 +87,14 @@ const firebaseConfig = {
     document.getElementById('outside').innerHTML=childData['outside_food']
     document.getElementById('music').innerHTML=childData['music']
     document.getElementById('backup').innerHTML=childData['backup']
- 
+    
+    $('<div class="item"><img src="'+ childData['images']+'"></div>')
+    .appendTo('.carousel-inner');
+    
+    
     });
   });
 
   
 
     
-
-
-
-
-    
-
-
-
