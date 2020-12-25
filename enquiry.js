@@ -168,7 +168,7 @@ const dr =firebase.database().ref("/vendors");
            ideal:drs[k].ideal,
            price:drs[k].price,
            capacity:drs[k].capacity,
-           image_url:drs[k].image,
+           image_url:drs[k].images,
            vendor_name:drs[k].vendor_name,
            tnc:drs[k].terms_and_conditions,
            city:drs[k].city,
