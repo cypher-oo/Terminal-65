@@ -87,14 +87,29 @@ const firebaseConfig = {
     document.getElementById('outside').innerHTML=childData['outside_food']
     document.getElementById('music').innerHTML=childData['music']
     document.getElementById('backup').innerHTML=childData['backup']
+    var images=childData.images
+    var i =0
+  //  console.log(childData.images)
     
-    $('<div class="item"><img src="'+ childData['images']+'"></div>')
-    .appendTo('.carousel-inner');
+  //   $('<div class="item"><img src="'+ images+'"></div>')
+  //   .appendTo('.carousel-inner');
     
     
     });
   });
 
   
-
-    
+  var imagesRef = firebase.database().ref("/vendors/"+x+"/images");
+  
+  imagesRef.once("value").then(function(snapshot) {
+    snapshot.forEach(function(snapshot) {
+      var xx = snapshot.val();              
+      
+    //  console.log(childData.images)
+      console.log(xx)
+      $('<div class="item"><img src="'+ xx +'"></div>')
+      .appendTo('.carousel-inner');
+      
+      
+      });
+    });
