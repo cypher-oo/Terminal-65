@@ -87,8 +87,9 @@ const firebaseConfig = {
     document.getElementById('outside').innerHTML=childData['outside_food']
     document.getElementById('music').innerHTML=childData['music']
     document.getElementById('backup').innerHTML=childData['backup']
-    var images=childData.images
-    var i =0
+    document.getElementById('venue-pageheader').src=childData['image']
+   
+    var i =0  
   //  console.log(childData.images)
     
   //   $('<div class="item"><img src="'+ images+'"></div>')
@@ -107,7 +108,7 @@ const firebaseConfig = {
       
     //  console.log(childData.images)
       console.log(xx)
-      $('<div class="item"><img style="max-width:100%; max-height:auto;  border-radius: 0%; padding: 10px;" src="'+ xx +'"></div>')
+      $('<div class="item"><img style="max-width:100%; max-height:auto;  border-radius: 0%; padding: 10px;" onclick="lightbox(1)" src="'+ xx +'"></div>')
       .appendTo('.carousel-inner');
       
       
