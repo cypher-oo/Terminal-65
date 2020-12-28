@@ -173,14 +173,15 @@ const dr =firebase.database().ref("/vendors");
            tnc:drs[k].terms_and_conditions,
            city:drs[k].city,
            state:drs[k].state,
-           
+           images:drs[k].images,
            id:k,
          });
         //  document.getElementById('test').innerHTML=drs[k].vendor_name
         //  document.getElementById('price').innerHTML='Rs '+ drs[k].price,
         //  document.getElementById('description').innerHTML=drs[k].description,
         //  document.getElementById('address').innerHTML=drs[k].city+","+drs[k].state,
-        //  document.getElementById('pic').src=drs[k].image
+        // document.getElementById('img01').src=drs[k].image
+
          console.log(vendors)
          var htmlDiv = "";
 
@@ -192,7 +193,7 @@ vendors.forEach(elem => {
                         <!-- Vendor thumbnail -->
                         <div class="vendor-img zoomimg" >
                             <!-- Vendor img -->
-                            <a href="#"><img src="${elem.image_url}" alt="" class="img-fluid" style="border-radius: 10%"></a>
+                            <a href="#"  ><img src="${elem.image_url}" alt="" class="img-fluid" style="border-radius: 10%"></a>
                             <div class="wishlist-sign"><a href="#" class="btn-wishlist"><i class="fa fa-heart"></i></a></div>
                         </div>
                         <!-- /.Vendor img -->
