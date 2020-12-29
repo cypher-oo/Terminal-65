@@ -181,19 +181,21 @@ const dr =firebase.database().ref("/vendors");
         //  document.getElementById('description').innerHTML=drs[k].description,
         //  document.getElementById('address').innerHTML=drs[k].city+","+drs[k].state,
         // document.getElementById('img01').src=drs[k].image
-
-         console.log(vendors)
+          
+        
          var htmlDiv = "";
+          var htmlDiv2="";
 
 vendors.forEach(elem => {
-  console.log(elem.vendor_name)
+
+  console.log(elem.image)
   htmlDiv = htmlDiv+ `
   <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
                     <div class="vendor-thumbnail">
                         <!-- Vendor thumbnail -->
                         <div class="vendor-img zoomimg" >
                             <!-- Vendor img -->
-                            <a href="#"  ><img src="${elem.image_url}" alt="" class="img-fluid" style="border-radius: 10%"></a>
+                            <a href="#"  ><img onclick="document.getElementById('myModal2').style.display='block';document.getElementById('bandkr').style.display='block'" src="${elem.image_url}" alt="" class="img-fluid" style="border-radius: 10%"></a>
                             <div class="wishlist-sign"><a href="#" class="btn-wishlist"><i class="fa fa-heart"></i></a></div>
                         </div>
                         <!-- /.Vendor img -->
@@ -233,13 +235,14 @@ vendors.forEach(elem => {
 `;
 console.log(document.getElementById('xx'))
 document.getElementById('xx').innerHTML=htmlDiv
+
 });
 
-       }
+     }  
 
-
-         
+          
      } 
+
      })
      
   

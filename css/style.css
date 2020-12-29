@@ -684,7 +684,7 @@ img.grayscale:hover { filter: grayscale(0); opacity: 1; transition-property: fil
 .page-breadcrumb .breadcrumb .breadcrumb-item .breadcrumb-link { color: #f6f6f6; }
 .page-breadcrumb .breadcrumb .breadcrumb-item .breadcrumb-link:hover { color: #ff4d4d; }
 .page-breadcrumb .breadcrumb .breadcrumb-item+.breadcrumb-item::before { display: inline-block; padding-right: .5rem; padding-left: .5rem; color: #bebbc1; content: "\f105"; font-family: 'font Awesome 5 Free'; font-weight: 900; font-size: 9px; }
-.venue-pageheader { background: url(../images/venue-pageheader.jpg) no-repeat center; background-size: cover; }
+.venue-pageheader {  background-size: cover; }
 .venue-pageheader .page-section { padding-top: 250px; padding-bottom: 70px; }
 .page-title { font-size: 46px; color: #fff; margin-bottom: 0px; font-weight: 400; line-height: 1.2; }
 .page-description { color: #fff; }

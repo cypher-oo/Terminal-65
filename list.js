@@ -88,9 +88,13 @@ const firebaseConfig = {
     document.getElementById('music').innerHTML=childData['music']
     document.getElementById('backup').innerHTML=childData['backup']
     document.getElementById('venue-pageheader').src=childData['image']
+
+
    
     var i =0  
-  //  console.log(childData.images)
+   // console.log(childData.image)
+
+   document.getElementById("venue-pageheader").style.backgroundImage = "url(" + childData.image + ")"
     
   //   $('<div class="item"><img src="'+ images+'"></div>')
   //   .appendTo('.carousel-inner');
@@ -107,10 +111,10 @@ const firebaseConfig = {
       var xx = snapshot.val();              
       
     //  console.log(childData.images)
-      console.log(xx)
+     // console.log(xx)
       $('<div class="item"><img style="max-width:100%; max-height:auto;  border-radius: 0%; padding: 10px;" onclick="lightbox(1)" src="'+ xx +'"></div>')
       .appendTo('.carousel-inner');
-      
-      
+
+     
       });
     });
