@@ -50,16 +50,75 @@
     <meta property="og:site_name" content="sloshoutofficial" />
     <link href="https://plus.google.com/u/0/113527907593699273394" rel="publisher" />
     <meta name="theme-color" content="#99221D">
+
 <style>
+* {box-sizing: border-box;}
+
+.mySlides {display: none;}
 
 
-#myImg {
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.3s;
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
 }
 
-#myImg:hover {opacity: 0.7;}
+/* Caption text */
+
+
+/* Number text (1/3 etc) */
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+</style>
+<style>
+
+#myImg {
+  border-radius: 5px !important;
+  cursor: pointer !important;
+  transition: 0.3s !important;
+  height: auto;
+  max-width: 100%;
+  width:100%;
+}
+
+
 
 /* The Modal (background) */
 .modal1 {
@@ -77,24 +136,8 @@
 }
 
 /* Modal Content (image) */
-.modal-content1 {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 700px;
-}
 
-/* Caption of Modal Image */
-#caption {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 700px;
-  text-align: center;
-  color: #ccc;
-  padding: 10px 0;
-  height: 150px;
-}
+
 
 /* Add Animation */
 .modal-content1, #caption {  
@@ -894,10 +937,48 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 <!-- The Modal -->
-<div id="myModal2" class="modal1">
-  <span class="close" id="closeit" onclick="document.getElementById('myModal2').style.display='none'" >&times;</span>
-  
-  
+<div id="bandkr">
+ 
+ 
+<div id="myModal2" class="modal1" >
+ <span class="close" id="closeit" onclick="document.getElementById('bandkr').style.display='none'" >&times;</span>
+ 
+ 
+<div class="slideshow-container" id="ok">
+
+ <div class="mySlides fade">
+
+  <img src="./images/post-img-1.jpg" id="myImg" >
+
+  </div>
+  <div class="mySlides fade">
+
+  <img src="./images/post-img-4.jpg" id="myImg" >
+
+  </div>
+  <div class="mySlides fade">
+
+  <img src="./images/post-img-1.jpg" id="myImg" >
+
+  </div>
+
+
+
+</div>
+<br>
+
+<div  style="text-align:center">
+  <span class="dot" ></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span> 
+  <span class="dot"></span>
+  <span class="dot"></span>
+</div>
+
+  </div>
 </div>
 
 
@@ -1354,6 +1435,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <script src="./assets/public/js/jquery-ui.js" ></script>
       <script src="./assets/public/js/custom.js" ></script>
       <script src="list.js"></script>
+       <script src="slide.js"></script>
       <script type="text/javascript">
         function change_venue_type(city,location,block,venuetype,package){
           var val = $('#'+venuetype).val();
@@ -1736,19 +1818,202 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <script>
         // Get the modal
 var modal = document.getElementById("myModal2");
-
+var modalct = document.getElementById("bandkr");
 // Get the image and insert it inside the modal - use its "alt" text as a caption
-var img = document.getElementById("myModal2");
-var modalImg = document.getElementById("myModal2");
+var img = document.getElementById("");
+var modalImg = document.getElementById("");
 
 img.onclick = function(){
   modal.style.display = "block";
+  modalct.style.display = "block";
   modalImg.src = this.src;
   
 }
 
-
 </script>
+<script>
+var slideIndex = 0;
+showSlides();
 
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 4000); // Change image every 2 seconds
+}
+</script>
+<script type="text/javascript">
+
+   
+  
+    
+   
+// var userDataRef = firebase.database().ref("vendors").orderByKey();
+  // userDataRef.once("value").then(function(snapshot) {
+  // snapshot.forEach(function(childSnapshot) {
+  //   var key = childSnapshot.key;
+  //   var childData = childSnapshot.val();              
+  //   var name_val = childSnapshot.val().vendor_name;
+  //   var price = childSnapshot.val().price;
+  //   var state = childSnapshot.val().state;
+  //   var city = childSnapshot.val().city;
+  //   var image=childSnapshot.val().image;
+    
+    // document.getElementById('test').innerHTML=childData['vendor_name']
+    // document.getElementById('pic').src=childData['picture']
+    // document.getElementById('description').innerHTML=childData['description']
+
+    // document.getElementById('city').innerHTML=childData['city']
+  //   console.log(childData)
+  
+ 
+  //   });
+  // });
+//      const dr =firebase.database().ref("/vendors");
+//      dr.on('value',(snapshot)=>{
+//        var drs =snapshot.val()
+//        if(drs!=null)
+//        {
+//        var keys =Object.keys(drs);
+//        console.log(drs)
+//        let vendors =[];
+//        for(var dr = 0 ;dr<keys.length;dr++){
+//          var k=keys[dr];
+//          vendors.push({
+//            description:drs[k].description,
+//            ideal:drs[k].ideal,
+//            price:drs[k].price,
+//            capacity:drs[k].capacity,
+//            image_url:drs[k].image,
+//            vendor_name:drs[k].vendor_name,
+//            tnc:drs[k].terms_and_conditions,
+//            city:drs[k].city,
+//            state:drs[k].state,
+           
+//            id:k,
+//          });
+//         //  document.getElementById('test').innerHTML=drs[k].vendor_name
+//         //  document.getElementById('price').innerHTML='Rs '+ drs[k].price,
+//         //  document.getElementById('description').innerHTML=drs[k].description,
+//         //  document.getElementById('address').innerHTML=drs[k].city+","+drs[k].state,
+//         //  document.getElementById('pic').src=drs[k].image
+//          console.log(vendors)
+//          var htmlDiv = "";
+
+// vendors.forEach(elem => {
+//   console.log(elem.vendor_name)
+//   htmlDiv = htmlDiv+ `
+//   <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
+//                     <div class="vendor-thumbnail">
+//                         <!-- Vendor thumbnail -->
+//                         <div class="vendor-img zoomimg">
+//                             <!-- Vendor img -->
+//                             <a href="#"><img src="${elem.image_url}" alt="" class="img-fluid"></a>
+//                             <div class="wishlist-sign"><a href="#" class="btn-wishlist"><i class="fa fa-heart"></i></a></div>
+//                         </div>
+//                         <!-- /.Vendor img -->
+//                         <div class="vendor-content">
+//                             <!-- Vendor Content -->
+//                             <h2 class="vendor-title"><a href="#" class="title">${elem.vendor_name}</a></h2>
+//                             <p class="vendor-address">${elem.city},${elem.state}</p>
+//                         </div>
+//                         <div class="vendor-meta">
+//                             <div class="vendor-meta-item vendor-meta-item-bordered">
+//                                 <span class="vendor-price">
+//                                   Rs ${elem.price}
+//                                 </span>
+//                                 <span class="vendor-text">Start From</span></div>
+//                             <div class="vendor-meta-item vendor-meta-item-bordered">
+//                                 <span class="vendor-guest">
+//                                    ${elem.capacity}+
+//                                 </span>
+//                                 <span class="vendor-text">Guest</span>
+//                             </div>
+//                             <div class="vendor-meta-item vendor-meta-item-bordered">
+//                                 <span class="rating-star">
+//                                     <i class="fa fa-star rated"></i>
+//                                     <i class="fa fa-star rated"></i>
+//                                     <i class="fa fa-star rated"></i>
+//                                     <i class="fa fa-star rated"></i>
+//                                     <i class="fa fa-star rate-mute"></i> 
+//                                     </span>
+//                                 <span class="rating-count vendor-text">(20)</span></div>
+//                         </div>
+//                         <!-- /.Vendor Content -->
+//                     </div>
+//                     <!-- /.Vendor thumbnail -->
+//                 </div>
+// `;
+// console.log(document.getElementById('xx'))
+// document.getElementById('xx').innerHTML=htmlDiv
+// });
+
+//        }
+
+
+         
+//      } 
+//      })
+const der =firebase.database().ref("/vendors");
+     der.on('value',(snapshot)=>{
+       var dres =snapshot.val()
+       if(dres!=null)
+       {
+       var keys =Object.keys(dres);
+       console.log(dres)
+       let vendors =[];
+       for(var der = 0 ;der<keys.length;der++){
+         var k=keys[der];
+         vendors.push({
+          
+           images:dres[k].images,
+           id:k,
+         });
+        //  document.getElementById('test').innerHTML=drs[k].vendor_name
+        //  document.getElementById('price').innerHTML='Rs '+ drs[k].price,
+        //  document.getElementById('description').innerHTML=drs[k].description,
+        //  document.getElementById('address').innerHTML=drs[k].city+","+drs[k].state,
+        // document.getElementById('img01').src=drs[k].image
+        console.log("heloooooo")
+          console.log()
+        
+          var htmlDiv2="";
+
+vendors.forEach(elem2 => {
+  
+for(i=0;i<elem2.images.length;i++){
+
+  htmlDiv2 = htmlDiv2+ `   <div class="mySlides fade">
+
+  <img src="${elem2.images[i]}" id="myImg" >
+
+  </div>
+`;
+}
+console.log(document.getElementById('ok'))
+
+document.getElementById('ok').innerHTML=htmlDiv2
+
+});
+
+     }  
+
+          
+     } 
+
+     })
+     
+  
+</script>
     </body>
     </html>
