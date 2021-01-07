@@ -23,6 +23,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
     <!-- Style CSS -->
     <link href="css/style.css" rel="stylesheet">
+    <link href="./assets/public/css/custom.css" rel="stylesheet" type="text/css" rel="preload" as="style"/>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -32,15 +33,27 @@
 </head>
 
 <body>
+     <section class="top">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="top-slogn">#1 Party Booking Platform</div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 text-right">
+                <div class="top-link">
+                    <a href="tel:+919045922255"><i class="sprite call-icon"></i>&nbsp;+91 9045922255</a>
+                </div>
+            </div>
+        </div>
+    </section>
      <!-- header -->
-    <div class="header-transparent">
+    <div class="header-collapse">
         
         <!-- navigation start -->
         <div class="container">
             <div class="row">
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                     <nav class="navbar navbar-expand-lg navbar-transparent">
-                        <a class="navbar-brand" href="index.html"> <img src="./images/logo.jpeg" alt=""><a>
+                        <a class="navbar-brand" href="index.html"> <img src="./images/logo.JPEG" alt=""><a>
                         <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbar-transparent" aria-controls="navbar-transparent" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="icon-bar top-bar mt-0"></span>
                             <span class="icon-bar middle-bar"></span>
@@ -230,6 +243,7 @@
                                                 <li><a class="dropdown-item" href="shortcode-buttons.html">
                                                         Buttons</a>
                                                 </li>
+
                                                 <li><a class="dropdown-item" href="shortcode-blockquote.html">
                                                         Blockquotes</a>
                                                 </li>
@@ -296,7 +310,8 @@
         <!-- navigation close -->
     </div>
     <!-- /.header -->
-   
+    <!-- hero-section -->
+    
     
 	<div class="space-medium">
 	 <div class="container">
@@ -308,7 +323,7 @@
     <h2 class="mb10"> Register your company here</h2>
     <h3 class="mb10"> Our business development officer will be in touch with you shortly.</h3>
     <br><br>
-	<form action="https://script.google.com/macros/s/AKfycbzlp7c2Bm-5R82XSK7fCEapJuchFt23w0fP0kA4/exec" id='contact' class="gform">
+	<form action="https://script.google.com/macros/s/AKfycbzlp7c2Bm-5R82XSK7fCEapJuchFt23w0fP0kA4/exec" method="POST" class="gform">
         <div class="form-row">
             <div class="form-group col-md-6">
             <input type="text" class="form-control" name="firstName" id="firstName" placeholder="First Name" required>
@@ -322,7 +337,7 @@
             <input type="email" class="form-control" name="inputEmail4" id="inputEmail4" placeholder="Email" required>
             </div>
             <div class="form-group col-md-6">
-            <input type="telephone" pattern="[0-9]{10}"class="form-control" name="contactNumber" id="contactNumber" placeholder="Contact Number" required>
+            <input type="number" class="form-control" name="contactNumber" id="contactNumber" placeholder="Contact Number" required>
             </div>
         </div>
         <div class="form-group">
@@ -336,7 +351,7 @@
             <input type="text" class="form-control" name="city" id="city"  placeholder="City" required>
             </div>
             <div class="form-group col-md-6">
-            <input type="text" class="form-control" id='state' name="state" placeholder="State" required>
+            <input type="text" class="form-control" name="state" placeholder="State" required>
             </div>
         </div>
         <!-- <div class="form-row">
@@ -401,7 +416,6 @@
 							<option value="Function Hall">Function Hall &nbsp &nbsp &nbsp &nbsp </option>
 							<option value="Resort">Resort &nbsp &nbsp &nbsp &nbsp </option>
 							<option value="Party Lawn">Party Lawn &nbsp &nbsp &nbsp &nbsp </option>
-                            <option value="House Party">House Party &nbsp &nbsp &nbsp &nbsp </option>
 						
                             </select>
                     </div>
@@ -419,7 +433,7 @@
                     </select>
             </div>
         </div> -->
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary" onclick="alertit()">Submit</button>
         </form>
 
 	</div>
@@ -438,7 +452,7 @@
                     <!-- footer-widget -->
                     <div class="footer-widget">
                         <a href="#"><img src="images/logo.jpeg" alt="" class="mb20"></a>
-                        <p class="mb10" style="color:#fff">  Our goal is to change the way people celebrate!
+                        <p class="mb10" style="color: #828282">  Our goal is to change the way people celebrate!
 
                      </br> Happy online venue booking to you!
 
@@ -515,9 +529,6 @@
     </div> 
 	<a href="javascript:" id="return-to-top"><i class="fa fa-angle-up"></i></a>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
-    <script src="main.js"></script>
-     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="js/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
@@ -539,6 +550,12 @@
         }
     });
     </script>
+    <script type="text/javascript">
+          function alertit(){
+
+            alert("Thank You for approaching Terminal65! Someone from the team will contact you within 24 hours! Press Ok to confirm your enquiry. Note: You will be redirected to terminal65.com");
+          }
+      </script>
 </body>
 
 </html>

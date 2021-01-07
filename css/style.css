@@ -2080,7 +2080,7 @@ input:checked+.slider { background: #ff4d4d; }
 .navbar-transparent {/* margin-top: 5px; */padding: 20px 0px; }
 .header-transparent .navbar-toggler { padding: 11px 13px; font-size: 1.25rem; line-height: 1; background-color: transparent; border: 1px solid #eaeaf0; border-radius: .25rem; position: relative; background-color: #fff; }
 .navbar-transparent.navbar-light .navbar-nav .nav-link { color: #fff; padding: 9px 16px; }
-.navbar-transparent .navbar-nav .nav-item .nav-link { font-size: 16px; color: #ffffff; }
+.navbar-transparent .navbar-nav .nav-item .nav-link { font-size: 19px; color: #ffffff; }
 .navbar-transparent .dropdown-toggle::after { margin-top: 1px; display: inline-block; width: 0; height: 0; margin-left: 6px; vertical-align: -2px; content: "\f107"; border-top: none; border-right: none; border-bottom: none; border-left: none; color: #ffffff; font-family: 'Font Awesome\ 5 Free'; font-weight: 900; margin-right: 15px; font-size: 13px; float: right; }
 .navbar-transparent .navbar-collapse.show .dropdown .dropdown-menu .dropdown-item { border-bottom: 1px solid #f1f1f6; border-radius: 0px; }
 .header-collapse { background: #9B2016 !important; border-color: #ff4b47; }
