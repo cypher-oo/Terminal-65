@@ -219,13 +219,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 <div class="row">
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <nav class="navbar navbar-expand-lg navbar-transparent">
-                            <a class="navbar-brand" href="index.html"><img src="./images/logo.jpeg" alt=""><a>
+                            <a class="navbar-brand" href="index.html"><img src="./images/logo.jpeg" alt="" style="position: relative; right:50px;"></a>
                               <h1  style="margin:20px 0px 1px 1px; color: white; border: 1px solid grey; font-size: 32px; padding: 5px;font-family: Herculanum, 'Eras Demi ITC', sans-serif;">Terminal 65</h1>
-                            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbar-transparent" aria-controls="navbar-transparent" aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="icon-bar top-bar mt-0"></span>
-                                <span class="icon-bar middle-bar"></span>
-                                <span class="icon-bar bottom-bar"></span>
-                            </button>
+                            
+                                
                             <div class="collapse navbar-collapse" id="navbar-transparent">
                             <ul class="navbar-nav ml-auto mt-2 mt-lg-0 mr-3">
                                     <!--<li class="nav-item dropdown">
@@ -589,12 +586,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         <input type="number" id="otp3" placeholder="Enter OTP" class="input" />
                         <input type="hidden" name="form_name" value="Header Homepage Stepwise Popup">
                     </div>
-                    
-                    <button name="previous" id="step_popup_previous_3" class="btn previous" onclick="$('.fieldset-4').hide();$('.fieldset-2').css('display', 'block');">Prev</button>
-                    <button type="button"  class="button btn-primary" onclick="alertit()">Submit</button>
+                    <button class="button next" style="display: none;" type="submit" onclick="alertit()">Submit</button>
+                    <button name="previous" id="step_popup_previous_3" class="btn previous" onclick="$('.fieldset-4').hide();$('.fieldset-2').css('display', 'block');alertit()">Submit</button>
+                   
                     
                                 <input type="checkbox" value="1" id="tnc55" checked> I agree the <a target="_blank" href="aboutus.html">Terms & Conditions</a>
-                    <button class="button next" style="display: none;" type="submit" onclick="alertit()">Submit</button>
+                  
                 </div>
             </fieldset>
         </form>
@@ -634,7 +631,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                 <div class="col-lg-4 col-md-4 col-sm-4 col-4">
                                     <label>
     
-                                        <img src="https://cdn.sloshout.com/images/banquet.jpeg" class="step_form_icon" alt="Banquet Halls" onclick="$('.fieldset2').hide();$('.fieldset-22').css('display', 'block');$('#venuetype3').val('banquet halls');change_venue_type('location3','location23','res_block3','venuetype3','package2',);" style="cursor: pointer;"><br>Banquet / Party Halls
+                                        <img src="https://cdn.sloshout.com/images/banquet.jpeg" class="step_form_icon" alt="Banquet Halls" onclick="$('.fieldset2').hide();$('.fieldset-22').css('display', 'block');$('#venuetype3').val('banquet halls');change_venue_type('location3','location23','res_block3','venuetype3','package2',);" style="cursor: pointer;">Banquet/PartyHalls
                                     </label>
                                 </div>
                                 <div class="col-lg-4 col-md-4 col-sm-4 col-4">
@@ -646,13 +643,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                 <div class="col-lg-4 col-md-4 col-sm-4 col-4">
                                     <label>
     
-                                        <img src="https://cdn.sloshout.com/images/house.jpeg" class="step_form_icon" alt="House" onclick="$('.fieldset2').hide();$('.fieldset-22').css('display', 'block');$('#venuetype3').val('house');change_venue_type('location3','location23','res_block3','venuetype3','package2',);" style="cursor: pointer;"><br>House / Apartment
+                                        <img src="https://cdn.sloshout.com/images/house.jpeg" class="step_form_icon" alt="House" onclick="$('.fieldset2').hide();$('.fieldset-22').css('display', 'block');$('#venuetype3').val('house');change_venue_type('location3','location23','res_block3','venuetype3','package2',);" style="cursor: pointer;"><br>House/Apartment
                                     </label>
                                 </div>
                                 <div class="col-lg-4 col-md-4 col-sm-4 col-4">
                                     <label>
     
-                                        <img src="https://cdn.sloshout.com/images/family.jpeg" class="step_form_icon" alt="Family Restaurant" onclick="$('.fieldset2').hide();$('.fieldset-22').css('display', 'block');$('#venuetype3').val('family restaurant');change_venue_type('location3','location23','res_block3','venuetype3','package2',);" style="cursor: pointer;"><br>Family Restaurants
+                                        <img src="https://cdn.sloshout.com/images/family.jpeg" class="step_form_icon" alt="Family Restaurant" onclick="$('.fieldset2').hide();$('.fieldset-22').css('display', 'block');$('#venuetype3').val('family restaurant');change_venue_type('location3','location23','res_block3','venuetype3','package2',);" style="cursor: pointer;"><br>FamilyRestaurants
                                     </label>
                                 </div>
                             </div>
@@ -729,11 +726,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                 <div style="visibility: hidden;" id="otp_div_55">
                                     <input type="number" id="otp55" placeholder="Enter OTP" class="input" />
                                 </div>
-                                <button id="step_prev_3" name="previous" class="previous btn" onclick="$('.fieldset-24').hide();$('.fieldset-22').css('display', 'block');">Prev</button>
-                                <button type="button" class="button btn-primary" onclick="alertit()" >Submit</button>
+                                
+                                <button class="button next" style="display: none;" onclick="alertit()">Submit</button>
+                                <button id="step_prev_3" name="previous" class="previous btn" onclick="$('.fieldset-24').hide();$('.fieldset-22').css('display', 'block');alertit()">Submit</button>
+                                
                                 
                                 <input type="checkbox" value="1" id="tnc55" checked> I agree the <a target="_blank" href="https://www.sloshout.com/terms/">Terms & Conditions</a>
-                                <button class="button next" style="display: none;" onclick="alertit()">Submit</button>
+                               
                             </div>
                         </fieldset>
                         

@@ -88,7 +88,7 @@ const firebaseConfig = {
     document.getElementById('music').innerHTML=childData['music']
     document.getElementById('backup').innerHTML=childData['backup']
     document.getElementById('venue-pageheader').src=childData['image']
-
+    console.log(childData.ideal);
 
    
     var i =0  
