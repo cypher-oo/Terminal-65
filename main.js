@@ -15,6 +15,7 @@ const firebaseConfig = {
 document.getElementById('contact').addEventListener('submit',submitForm);
 function submitForm(e){
   e.preventDefault();
+  document.getElementById("contact").submit();
   var firstname = document.getElementById("firstName").value;
   var lastname = document.getElementById("lastName").value;
   var email = document.getElementById('inputEmail4').value;
@@ -38,6 +39,7 @@ function submitForm(e){
   // },3000); 
 
   // Clear form
+
   document.getElementById('contact').reset();
 }
 
