@@ -820,7 +820,7 @@ img.grayscale:hover { filter: grayscale(0); opacity: 1; transition-property: fil
 
 .vendor-thumbnail { border: 1px solid #e6e5e7; padding: 4px; background-color: #fff; border-radius: 4px; margin-bottom: 30px; position: relative; }
 .vendor-img { }
-.vendor-img img { width: 50%; }
+.vendor-img img { width: 100%; }
 .wishlist-sign { position: absolute; top: 15px; right: 20px; text-align: center; }
 .vendor-content { padding: 22px 26px 22px 26px; margin-bottom: 0px; }
 .vendor-content-sidebar { padding: 20px 20px 20px 0px; }
